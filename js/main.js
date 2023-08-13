@@ -13,6 +13,14 @@ btnSearch.addEventListener("click", () => {
   weather.fetchWeather(cityName);
 });
 
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    info.classList.remove("hide");
+    let cityName = search.value;
+    weather.fetchWeather(cityName);
+  }
+});
+
 let weather = {
   fetchWeather: (city) => {
     fetch(
