@@ -11,6 +11,7 @@ btnSearch.addEventListener("click", () => {
   info.classList.remove("hide");
   let cityName = search.value;
   weather.fetchWeather(cityName);
+  limpaCampo();
 });
 
 document.addEventListener("keydown", function (event) {
@@ -18,8 +19,13 @@ document.addEventListener("keydown", function (event) {
     info.classList.remove("hide");
     let cityName = search.value;
     weather.fetchWeather(cityName);
+    limpaCampo();
   }
 });
+
+function limpaCampo() {
+  search.value = "";
+}
 
 let weather = {
   fetchWeather: (city) => {
