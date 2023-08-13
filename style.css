@@ -37,6 +37,10 @@ img {
   .box {
     width: 80%;
   }
+
+  .info-input input {
+    color: white;
+  }
 }
 
 h1 {
@@ -68,6 +72,7 @@ h2 {
 .info-input input {
   width: 55%;
   padding: 0.5rem;
+  color: black;
 }
 
 button {
